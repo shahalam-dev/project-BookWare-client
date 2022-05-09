@@ -6,7 +6,7 @@ const InventoryCard = ({ book }) => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are You Sure?");
     if (proceed) {
-      const uri = `http://localhost:5000/book/${id}`;
+      const uri = `https://agile-wildwood-07833.herokuapp.com/book/${id}`;
       axios.delete(uri).then((res) => console.log(res));
       window.location.reload();
     }

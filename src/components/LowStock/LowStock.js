@@ -6,7 +6,7 @@ const LowStock = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    const uri = "http://localhost:5000/lowstock";
+    const uri = "https://agile-wildwood-07833.herokuapp.com/lowstock";
     axios.get(uri).then((res) => setBooks(res.data));
   }, []);
   return (

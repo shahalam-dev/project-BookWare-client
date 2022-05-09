@@ -28,9 +28,12 @@ const useFirebase = () => {
       .then(async (result) => {
         const user = result.user;
         const email = user.email;
-        const { data } = await axios.post("http://localhost:5000/login", {
-          email,
-        });
+        const { data } = await axios.post(
+          "https://agile-wildwood-07833.herokuapp.com/login",
+          {
+            email,
+          }
+        );
         localStorage.setItem("accessToken", data.accessToken);
         setUser(user);
         console.log(email);

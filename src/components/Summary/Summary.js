@@ -20,7 +20,7 @@ const Summary = () => {
   const totalValue = tValue();
 
   useEffect(() => {
-    const uri = "http://localhost:5000/books";
+    const uri = "https://agile-wildwood-07833.herokuapp.com/books";
     axios.get(uri).then((res) => setData(res.data));
   }, []);
   return (

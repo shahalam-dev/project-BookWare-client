@@ -12,11 +12,10 @@ const AddItem = () => {
   const stockQuantity = useRef();
   const bookPrice = useRef();
   const [user] = useAuthState(auth);
-  console.log(user.email);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const uri = "http://localhost:5000/book";
+    const uri = "https://agile-wildwood-07833.herokuapp.com/book";
     const bookData = {
       bookTitle: bookTitle.current.value,
       authorName: authorName.current.value,
@@ -33,7 +32,6 @@ const AddItem = () => {
         toast("Item added to inventory.");
         e.target.reset();
       });
-      console.log(user.email);
     }
   };
   return (
@@ -44,7 +42,7 @@ const AddItem = () => {
       <div className="col-md-8">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label for="bookTitle" class="form-label mb-2">
+            <label htmlFor="bookTitle" className="form-label mb-2">
               Book Title
             </label>
             <input
@@ -57,7 +55,7 @@ const AddItem = () => {
             />
           </div>
           <div className="mb-3">
-            <label for="authorName" class="form-label mb-2">
+            <label htmlFor="authorName" className="form-label mb-2">
               Author Name
             </label>
             <input
@@ -70,7 +68,7 @@ const AddItem = () => {
             />
           </div>
           <div className="mb-3">
-            <label for="imgUrl" class="form-label mb-2">
+            <label htmlFor="imgUrl" className="form-label mb-2">
               Cover Photo URL
             </label>
             <input
@@ -83,7 +81,7 @@ const AddItem = () => {
             />
           </div>
           <div className="mb-3">
-            <label for="publisher" class="form-label mb-2">
+            <label htmlFor="publisher" className="form-label mb-2">
               Publisher / Supplier
             </label>
             <input
@@ -96,7 +94,7 @@ const AddItem = () => {
             />
           </div>
           <div className="mb-3">
-            <label for="StockQuantity" class="form-label mb-2">
+            <label htmlFor="StockQuantity" className="form-label mb-2">
               Stock Quantity
             </label>
             <input
@@ -109,7 +107,7 @@ const AddItem = () => {
             />
           </div>
           <div className="mb-3">
-            <label for="bookPrice" class="form-label mb-2">
+            <label htmlFor="bookPrice" className="form-label mb-2">
               Book Price
             </label>
             <input

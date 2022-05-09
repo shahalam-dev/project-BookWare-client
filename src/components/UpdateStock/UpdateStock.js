@@ -14,7 +14,7 @@ const UpdateStock = () => {
     e.preventDefault();
     const stockCount = newStockCount.current.value;
     if (stockCount) {
-      const uri = `http://localhost:5000/book/${id}`;
+      const uri = `https://agile-wildwood-07833.herokuapp.com/book/${id}`;
       axios.put(uri, { quantity: stockCount }).then((res) => {
         setUpdate(1);
         toast("Stock Updated.");
@@ -28,7 +28,7 @@ const UpdateStock = () => {
   const handleDelivered = () => {
     const stockCount = book?.stockQuantity - 1;
     if (stockCount >= 0) {
-      const uri = `http://localhost:5000/book/${id}`;
+      const uri = `https://agile-wildwood-07833.herokuapp.com/book/${id}`;
       axios.put(uri, { quantity: `${stockCount}` }).then((res) => {
         toast("One Item delivered.");
         setUpdate(1);
@@ -37,7 +37,7 @@ const UpdateStock = () => {
   };
 
   useEffect(() => {
-    const uri = `http://localhost:5000/book/${id}`;
+    const uri = `https://agile-wildwood-07833.herokuapp.com/book/${id}`;
 
     axios.get(uri).then((res) => {
       setBook(res.data);

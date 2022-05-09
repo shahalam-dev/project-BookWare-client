@@ -5,7 +5,7 @@ import InventoryCard from "../InventoryCard/InventoryCard";
 const ManageInventories = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    const uri = "http://localhost:5000/books";
+    const uri = "https://agile-wildwood-07833.herokuapp.com/books";
     axios.get(uri).then((res) => setBooks(res.data));
   }, []);
   return (

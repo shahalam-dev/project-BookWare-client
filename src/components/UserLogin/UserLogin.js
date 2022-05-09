@@ -14,7 +14,10 @@ const UserLogin = () => {
     const email = emailInput.current.value;
     const password = passwordInput.current.value;
     await handleLogIn(email, password);
-    const { data } = await axios.post("http://localhost:5000/login", { email });
+    const { data } = await axios.post(
+      "https://agile-wildwood-07833.herokuapp.com/login",
+      { email }
+    );
     localStorage.setItem("accessToken", data.accessToken);
   };
   return (

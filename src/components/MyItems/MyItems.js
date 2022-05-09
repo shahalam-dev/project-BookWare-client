@@ -10,7 +10,7 @@ const MyItems = () => {
 
   useEffect(() => {
     const getMyItems = async () => {
-      const uri = `http://localhost:5000/my-items/?email=${user.email}`;
+      const uri = `https://agile-wildwood-07833.herokuapp.com/my-items/?email=${user.email}`;
       const { data } = await axios.get(uri, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -23,9 +23,18 @@ const MyItems = () => {
   }, [user.email]);
   return (
     <div>
-      {books.map((book) => (
-        <InventoryCard key={book?._id} book={book}></InventoryCard>
-      ))}
+      {!books.length && (
+        <div
+          className="d-flex align-items-center justify-content-center"
+          style={{ height: "60vh" }}
+        >
+          <h2 className="display-3">You Didn't add any item to inventory.</h2>
+        </div>
+      )}
+      {books.length > 0 &&
+        books.map((book) => (
+          <InventoryCard key={book?._id} book={book}></InventoryCard>
+        ))}
     </div>
   );
 };

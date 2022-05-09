@@ -36,6 +36,23 @@ const Blogs = () => {
             </div>
             <div className="col-md-12 my-5">
               <h3 className="fs-3">
+                When should you use nodejs and when should you use mongodb?
+              </h3>
+              <p className="fs-5 mt-3 lead">
+                <strong>MongoDB :</strong> MongoDB and NodeJS are two different
+                technologies. MonogDB is a database system which gives you a
+                chance to efficiently store documents in a database and to
+                perform operations like data updates, or to search documents by
+                some criterias.
+                <br />
+                <strong>Node JS:</strong> NodeJS is javascript runtime that
+                helps us run JavaScript almost everywhere. Before NodeJS
+                javascript could run only in the browser. NodeJS's responsibilty
+                is especially to execute your application.
+              </p>
+            </div>
+            <div className="col-md-12 my-5">
+              <h3 className="fs-3">
                 Differences between sql and nosql databases?
               </h3>
               <p className="fs-5 mt-3 lead">
