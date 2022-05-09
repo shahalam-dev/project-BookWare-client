@@ -16,13 +16,6 @@ const Nav = () => {
             Home
           </NavLink>
           <NavLink
-            to="/about"
-            className="btn btn-outline-info m-2"
-            type="button"
-          >
-            About
-          </NavLink>
-          <NavLink
             to="/blogs"
             className="btn btn-outline-info m-2"
             type="button"
